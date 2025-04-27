@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,6 +17,15 @@ public class Index {
         wd = new ChromeDriver();
         wd.get("file:///C:/Users/marii/Downloads/21.index.html");
     }
+
+
+    @Test
+    public void tableTest(){
+        //Canada
+        WebElement canada = wd.findElement(By.cssSelector("tr:nth-child(3)>td:last-child"));
+        Assert.assertEquals(canada.getText(),"Canada");
+    }
+
 
 
     @Test
@@ -54,6 +64,24 @@ public class Index {
         //by name
         WebElement inputS = wd.findElement(By.cssSelector("[name='surename']"));
         WebElement inputS2 = wd.findElement(By.name("surename"));
+
+
+        // By.linkText & By.partialLinkText
+
+        WebElement a3 = wd.findElement(By.linkText("Item 1"));
+        WebElement a4 = wd.findElement(By.partialLinkText("m 1"));
+
+
+        WebElement inp = wd.findElement(By.cssSelector("[placeholder='Type your name']"));
+        //start
+        WebElement inp1 = wd.findElement(By.cssSelector("[placeholder ^='Type' ]"));
+        //end
+        WebElement inp2 = wd.findElement(By.cssSelector("[placeholder $= 'name']"));
+        //contains
+        WebElement inp3 = wd.findElement(By.cssSelector("[placeholder *='your' ]"));
+
+
+
     }
 
 
