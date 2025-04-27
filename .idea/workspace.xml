@@ -87,7 +87,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Index.tableTest">
+  <component name="RunManager" selected="Gradle.HomeWork.cssSelectors">
     <configuration name="HomeWork.cssSelectors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,9 +186,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Index.tableTest" />
         <item itemvalue="Gradle.HomeWork.cssSelectors" />
         <item itemvalue="Gradle.Index.cssLocators" />
+        <item itemvalue="Gradle.Index.tableTest" />
         <item itemvalue="Gradle.StartSelenium.test" />
       </list>
     </recent_temporary>

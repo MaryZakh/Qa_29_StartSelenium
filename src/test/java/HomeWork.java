@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class HomeWork {
 
     WebDriver wd;
@@ -43,6 +45,29 @@ public class HomeWork {
         WebElement element8 = wd.findElement(By.cssSelector("[name = 'password']"));
         WebElement element9 = wd.findElement(By.name("password"));
 
+        WebElement passwordInp = wd.findElement(By.xpath("//input[@placeholder='Password']"));
+        WebElement passwordInp1 = wd.findElement(By.xpath("//input[starts-with(@placeholder,'Pas')]"));
+        WebElement passwordInp2 = wd.findElement(By.xpath("//input[contains(@placeholder,'rd')]"));
+
+        //parent
+        WebElement el2 = wd.findElement(By.xpath("//h1/parent::*"));
+        WebElement el3 = wd.findElement(By.xpath("//h1/parent::div"));
+        WebElement el4 = wd.findElement(By.xpath("//h1/.."));
+
+        //ancestor
+        WebElement el5 = wd.findElement(By.xpath("//h1/ancestor::*"));//all
+        WebElement el6 = wd.findElement(By.xpath("//h1/ancestor::div"));//two options
+        WebElement el7 = wd.findElement(By.xpath("//h1/ancestor::div[2]"));//one options
+
+        //ancestor-or-self
+        List<WebElement> list3 = wd.findElements(By.xpath("//h1/ancestor-or-self::*"));
+
+        //following-sibling
+        List<WebElement> list4 = wd.findElements(By.xpath("//h1/following-sibling::a"));
+
+        //preceding-sibling
+        List<WebElement>list5 = wd.findElements(By.xpath("//a[last()]/preceding-sibling::*"));
+        WebElement h1_2 = wd.findElement(By.xpath("//a[3]/preceding-sibling::h1"));
 
     }
 
